@@ -8,7 +8,7 @@ bool redundantBracket(string str) {
         bool redundancy = true;
         char ch = str[i];
 
-        if(ch=='(' || ch=='+' || ch=='-' || ch=='-' || ch=='/') {
+        if(ch=='(' || ch=='+' || ch=='-' || ch=='*' || ch=='/') {
             st.push(ch);
         } else {
 
@@ -16,7 +16,7 @@ bool redundantBracket(string str) {
 
                 while(st.top() != '(') {
                     char top = st.top();
-                    if(top=='+' || top=='-' || top=='-' || top=='/') {
+                    if(top=='+' || top=='-' || top=='*' || top=='/') {
                         redundancy = false;
                     }
                     st.pop();

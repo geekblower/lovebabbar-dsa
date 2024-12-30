@@ -8,7 +8,7 @@ bool redundantBracket(string str) {
         bool redundancy = true;
         char ch = str[i];
 
-        if(ch=='(' || ch=='+' || ch=='-' || ch=='-' || ch=='/') {
+        if(ch=='(' || ch=='+' || ch=='-' || ch=='*' || ch=='/') {
             st.push(ch);
         } else {
 

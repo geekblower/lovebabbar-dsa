@@ -163,6 +163,16 @@ void removeNodes2(Node* &head) {
         }
     }
 }
+//function for deleting heap allocated memory for all nodes in Linked List after its use
+void delete_LL(Node* &head){
+        Node* temp;
+        while(temp->next!=NULL){
+            temp=head;
+            head=head->next;
+            delete temp;
+        }
+        delete temp;
+}
 
 int main() {
     Node *head = new Node(1);
@@ -180,11 +190,8 @@ int main() {
     insertAtTail(tail, pow(2,2));
     insertAtTail(tail, pow(2,9));
     insertAtTail(tail, pow(2,9));
-
     printList(head);
-
-    removeNodes1(head);
-    printList(head);
+    delete_LL(head);
 
     return 0;
 }

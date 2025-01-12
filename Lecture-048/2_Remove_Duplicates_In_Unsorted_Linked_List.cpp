@@ -191,8 +191,6 @@ int main() {
     insertAtTail(tail, pow(2,9));
     insertAtTail(tail, pow(2,9));
     printList(head);
-    insertAtMiddle(head,tail,3456,2); 
-    printList(head);
     delete_LL(head);
 
     return 0;
